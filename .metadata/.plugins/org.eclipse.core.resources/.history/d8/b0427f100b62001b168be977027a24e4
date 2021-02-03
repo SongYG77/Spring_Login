@@ -1,0 +1,20 @@
+package com.app.log.dao;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import com.app.log.User;
+
+@Repository
+public class UserDAOlm implements UserDAO {
+	
+	@Inject SqlSession sql;
+	
+	@Override
+	public void register(User user) throws Exception {
+		sql.insert("Mapper.register", user);
+	}
+
+}

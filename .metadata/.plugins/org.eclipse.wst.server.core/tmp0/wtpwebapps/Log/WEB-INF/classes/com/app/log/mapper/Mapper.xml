@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.log.mapper.Mapper">
+	<!-- 게시판 글 작성 -->
+	<insert id="register">
+	    INSERT INTO yg_practice( USERID 
+	   					       , USERPW 
+	   					       , NAME
+	   					       , PHONE 	)
+	                  VALUES(    #{userID} 
+	                 		   , #{userPW}
+	                 		   , #{Name}
+	                 		   , #{Phone} )
+    </insert>
+   <select id="login" resultType="com.app.log.User">
+		SELECT USERID, USERPW, NAME, PHONE
+		  FROM yg_practice
+		 WHERE USERID = #{userID}
+		   AND USERPW = #{userPW}   
+	</select>
+	<select id="checkoverlap" resultType="int">
+		SELECT COUNT(*)
+		  FROM yg_practice
+		 WHERE USERID = #{userID}   
+	</select>
+</mapper>

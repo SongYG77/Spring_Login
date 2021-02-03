@@ -1,0 +1,28 @@
+package com.app.log.dto;
+
+public class UserDTO {
+	private String UserID;
+	private String UserPW;
+
+	public String getUserID() {
+		return UserID;
+	}
+
+	public void setUserID(String userID) {
+		UserID = userID;
+	}
+
+	public String getUserPW() {
+		return UserPW;
+	}
+
+	public void setUserPW(String userPW) {
+		UserPW = userPW;
+	}
+
+	@Override
+	public String toString() {
+		return "UserDTO [UserID=" + UserID + ", UserPW=" + UserPW + "]";
+	}
+
+}

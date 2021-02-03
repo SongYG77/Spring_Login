@@ -1,0 +1,30 @@
+package com.app.log.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.log.User;
+import com.app.log.dao.UserDAO;
+
+@Service
+public class UserServicelm implements UserService {
+
+	@Autowired
+	private UserDAO dao;
+
+	@Override
+	public void register(User user) throws Exception {
+		dao.register(user);
+		System.out.println("service");
+	}
+
+	@Override
+	public User Login(User user) throws Exception {
+		System.out.println("service");
+		
+		System.out.println(dao.Login(user).toString());
+		return dao.Login(user);
+		
+	}
+
+}
