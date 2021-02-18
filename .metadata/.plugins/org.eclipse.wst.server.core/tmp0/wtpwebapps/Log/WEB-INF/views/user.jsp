@@ -53,25 +53,25 @@
 	<section id="container">
 		<form action="/log/user" method="post">
 			<div class="form-group has-feedback">
-				<label class="control-label" for="userID"> 아이디</label> <input
-					class="form-control" type="text" id="userID" name="userID" />
+				<label class="control-label" for="userID">&nbsp 아이디</label> <input
+					class="form-control" type="text" id="userID" name="userID"  placeholder="ID" />
 				<c:if test="${overlap == -1}">
 					<div>
-						<p style="color: red;">&nbsp &nbsp아이디가 중복됩니다.</p>
+						<p style="color: red;">&nbsp &nbsp 아이디가 중복됩니다.</p>
 					</div>
 				</c:if>
 			</div>
 			<div class="form-group has-feedback">
-				<label class="control-label" for="userPW"> 패스워드</label> <input
-					class="form-control" type="password" id="userPW" name="userPW" />
+				<label class="control-label" for="userPW">&nbsp 패스워드</label> <input
+					class="form-control" type="password" id="userPW" name="userPW"  placeholder="PW" />
 			</div>
 			<div class="form-group has-feedback">
-				<label class="control-label" for="Name"> 성명</label> <input
-					class="form-control" type="text" id="Name" name="Name" />
+				<label class="control-label" for="Name">&nbsp 성명</label> <input
+					class="form-control" type="text" id="Name" name="Name"  placeholder="NAME" />
 			</div>
 			<div class="form-group has-feedback">
-				<label class="control-label" for="Phone"> 전화번호</label> <input
-					class="form-control" type="text" id="Phone" name="Phone" />
+				<label class="control-label" for="Phone">&nbsp 전화번호</label> <input
+					class="form-control" type="text" id="Phone" name="Phone"  placeholder="PHONE NUMBER" />
 			</div>
 			<div class="form-group has-feedback">
 				<button class="btn btn-success" type="submit" id="submit">회원가입</button>

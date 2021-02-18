@@ -5,24 +5,45 @@
 <mapper namespace="com.app.log.mapper.Mapper">
 	<!-- 게시판 글 작성 -->
 	<insert id="register">
-	    INSERT INTO yg_practice( USERID 
-	   					       , USERPW 
-	   					       , NAME
-	   					       , PHONE 	)
-	                  VALUES(    #{userID} 
-	                 		   , #{userPW}
-	                 		   , #{Name}
-	                 		   , #{Phone} )
-    </insert>
-   <select id="login" resultType="com.app.log.User">
+		INSERT INTO yg_practice( USERID
+		, USERPW
+		, NAME
+		, PHONE
+		)
+		VALUES( #{userID}
+		, #{userPW}
+		, #{Name}
+		, #{Phone} )
+	</insert>
+	<select id="login" resultType="com.app.log.User">
 		SELECT USERID, USERPW, NAME, PHONE
-		  FROM yg_practice
-		 WHERE USERID = #{userID}
-		   AND USERPW = #{userPW}   
+		FROM yg_practice
+		WHERE USERID = #{userID}
+		AND USERPW = #{userPW}
 	</select>
 	<select id="checkoverlap" resultType="int">
 		SELECT COUNT(*)
-		  FROM yg_practice
-		 WHERE USERID = #{userID}   
+		FROM
+		yg_practice
+		WHERE USERID = #{userID}
+	</select>
+	<select id="findid" resultType="String">
+		SELECT USERID
+		FROM yg_practice
+		WHERE NAME = #{Name}
+		AND PHONE= #{Phone}
+	</select>
+	<select id="findpw" resultType="int">
+		SELECT COUNT(*)
+		FROM yg_practice
+		WHERE USERID = #{userID}
+		AND NAME = #{Name}
+		AND PHONE= #{Phone}
+
+	</select>
+	<select id="changepw">
+		UPDATE yg_practice
+		SET USERPW = #{userPW}
+		WHERE USERID = #{userID}
 	</select>
 </mapper>

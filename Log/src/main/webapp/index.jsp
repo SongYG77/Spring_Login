@@ -28,6 +28,11 @@
 			location.href = "/log/logout";
 
 		})
+		$(".regist").on("click", function() {
+
+			location.href = "/log/user";
+
+		})
 	})
 </script>
 
@@ -36,12 +41,12 @@
 	<section id="container">
 		<form action="/">
 			<div>
-				<h1>This is my First Spring Page<br>
-					Hello =ㅅ=</h1>
+				<h1>&nbsp This is my First Spring Page<br>
+					&nbsp Hello =ㅅ=</h1>
 			</div>
 			<div>
 				<c:if test="${member != null}">
-					<p>${name}님안녕하세요.</p>
+					<p>&nbsp ${name}님안녕하세요.</p>
 				</c:if>
 			</div>
 			
@@ -52,6 +57,7 @@
 				<c:if test="${member == null}">
 
 					&nbsp &nbsp<button class="golog btn-success" type="button">로그인</button>
+					&nbsp &nbsp<button class="regist btn-success" type="button">회원가입</button>
 				</c:if>
 			</div>
 

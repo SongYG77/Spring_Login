@@ -1,0 +1,10 @@
+
+2월 08, 2021 09:18:29.34 NEW SESSION
+2월 08, 2021 09:18:29.34 [18284:6844:0208/091829.342:ERROR:device_event_log_impl.cc(211)] [09:18:29.342] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 08, 2021 10:41:05.49 [18284:15476:0208/104105.493:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -7
+2월 08, 2021 10:41:05.57 [18284:6844:0208/104105.577:ERROR:device_event_log_impl.cc(211)] [10:41:05.574] USB: usb_service_win.cc:191 Failed to get device bus number: 요소가 없습니다. (0x490)
+2월 08, 2021 11:01:58.15 [18284:6844:0208/110158.153:ERROR:device_event_log_impl.cc(211)] [11:01:58.154] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+2월 08, 2021 12:17:01.67 [18284:6844:0208/121701.668:ERROR:device_event_log_impl.cc(211)] [12:17:01.665] USB: usb_service_win.cc:191 Failed to get device bus number: 요소가 없습니다. (0x490)
+2월 08, 2021 12:33:01.53 [18284:6844:0208/123301.531:ERROR:device_event_log_impl.cc(211)] [12:33:01.528] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+2월 08, 2021 12:33:01.67 [18284:6844:0208/123301.536:ERROR:device_event_log_impl.cc(211)] [12:33:01.534] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+2월 08, 2021 12:33:01.68 [18284:6844:0208/123301.540:ERROR:device_event_log_impl.cc(211)] [12:33:01.537] USB: usb_service_win.cc:281 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)

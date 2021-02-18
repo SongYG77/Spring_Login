@@ -16,24 +16,49 @@ public class UserDAOlm implements UserDAO {
 	
 	@Override
 	public void register(User user) throws Exception {
-		System.out.println("dao");
+
 		sql.insert("com.app.log.mapper.Mapper.register", user);
-		System.out.println("daoend");
+
 	}
 
 
 
 	@Override
 	public User Login(User user) {
-		System.out.println("dao");
+
 		return sql.selectOne("com.app.log.mapper.Mapper.login",user);
 	}
 	
 	@Override
 	public int CheckOverlap(User user) {
-		System.out.println("check overlap");
+
 		return sql.selectOne("com.app.log.mapper.Mapper.checkoverlap",user);
 		
+		
+	}
+
+
+
+	@Override
+	public String Findid(User user) throws Exception {
+		
+		return sql.selectOne("com.app.log.mapper.Mapper.findid",user);
+	}
+
+
+
+	@Override
+	public int Findpw(User user) throws Exception {
+		
+		return sql.selectOne("com.app.log.mapper.Mapper.findpw",user);
+	}
+
+
+
+	@Override
+	public void ChangePW(User change_info) {
+
+		sql.update("com.app.log.mapper.Mapper.changepw",change_info);
 		
 	}
 

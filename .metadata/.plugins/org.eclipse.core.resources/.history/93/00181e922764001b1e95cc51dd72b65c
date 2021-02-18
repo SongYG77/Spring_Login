@@ -1,8 +1,0 @@
-package com.app.log.service;
-
-import com.app.log.User;
-
-public interface UserService {
-	public void register(User user) throws Exception;
-	
-}
